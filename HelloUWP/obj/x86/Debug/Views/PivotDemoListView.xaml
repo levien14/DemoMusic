@@ -1,0 +1,55 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="HelloUWP.Views.PivotDemoListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:HelloUWP.Emity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Pivot>
+        <Pivot.Title>
+            <TextBlock Text="This is Pivot Demo" Style="{ThemeResource HeaderTextBlockStyle}"/>
+        </Pivot.Title>
+        <Pivot.RightHeader>
+            <CommandBar>
+                <AppBarButton>
+                    <SymbolIcon Symbol="Add"/>
+                </AppBarButton>
+                <AppBarButton>
+                    <SymbolIcon Symbol="AddFriend"/>
+                </AppBarButton>
+                <AppBarButton>
+                    <SymbolIcon Symbol="Admin"/>
+                </AppBarButton>
+            </CommandBar>
+        </Pivot.RightHeader>
+        <PivotItem Header="List Song">
+            <Grid>
+                <ListView x:ConnectionId='5'                                >
+                    <ListView.ItemTemplate>
+                        <DataTemplate                         >
+                            <StackPanel x:ConnectionId='6' Orientation="Horizontal">
+                                <Image x:ConnectionId='7'                             Width="150" Height="150"/>
+                                <TextBlock x:ConnectionId='8'                     />
+                                <SymbolIcon Symbol="Play"/> 
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </PivotItem>
+        <PivotItem Header=" ADD Song">
+            <StackPanel>
+                <TextBox x:ConnectionId='2' x:Name="Name" Header="Name"/>
+                <TextBox x:ConnectionId='3' x:Name="Namethumbnail" Header="thumbnail"/>
+                <Button x:ConnectionId='4' Content="Add Song"                      Margin="20"/>
+            </StackPanel>
+
+        </PivotItem>
+    </Pivot>
+
+
+</Page>
+

@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="HelloUWP.Views.PivotDemoListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:entity="using:HelloUWP.Emity"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Pivot>
+        <Pivot.Title>
+            <TextBlock Text="This is Pivot Demo" Style="{ThemeResource HeaderTextBlockStyle}"/>
+        </Pivot.Title>
+        <Pivot.RightHeader>
+            <CommandBar>
+                <AppBarButton>
+                    <SymbolIcon Symbol="Add"/>
+                </AppBarButton>
+                <AppBarButton>
+                    <SymbolIcon Symbol="AddFriend"/>
+                </AppBarButton>
+                <AppBarButton>
+                    <SymbolIcon Symbol="Admin"/>
+                </AppBarButton>
+            </CommandBar>
+        </Pivot.RightHeader>
+        <PivotItem Header="List Song">
+            <Grid>
+                <ListView ItemsSource="{x:Bind ListSong}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="entity:Song">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="{x:Bind thumbnail}" Width="150" Height="150"/>
+                                <TextBlock Text="{x:Bind name}"/>
+                                <SymbolIcon Symbol="Play"/> 
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </PivotItem>
+        <PivotItem Header=" ADD Song">
+            <StackPanel>
+                <TextBox x:Name="Name" Header="Name"/>
+                <TextBox x:Name="Namethumbnail" Header="thumbnail"/>
+                <Button Content="Add Song" Click="Button_Click" Margin="20"/>
+            </StackPanel>
+
+        </PivotItem>
+    </Pivot>
+
+
+</Page>

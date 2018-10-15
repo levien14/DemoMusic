@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="HelloUWP.Views.Display"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:HelloUWP.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="20">
+                <TextBlock HorizontalAlignment="Center" Text="Hello. Have a nice day!!!"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="TextID" Header="Id" Grid.Row="0" Grid.Column="0"/>
+                    <Button x:Name="btn_CheckId" Content="Check Id"  Grid.Row="0" Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="Do_CheckId"/>
+                </Grid>
+                <Image x:Name="Avatar" Width="200" Height="200" Margin="20"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="UserName"  Margin="5,0,0,0" Grid.Row="0" Grid.Column="1"/>
+                    <TextBlock x:Name="PassWord"  Margin="5,5,0,0" Grid.Row="1" Grid.Column="1"/>
+                    <TextBlock x:Name="Email" Margin="5,5,0,0" Grid.Row="2" Grid.Column="1"/>
+                    <TextBlock x:Name="Phonenumber" Margin="5,5,0,0" Grid.Row="3" Grid.Column="1"/>
+                    <TextBlock x:Name="Address" Margin="5,5,0,0" Grid.Row="4" Grid.Column="1"/>
+                    <TextBlock x:Name="Gender" Margin="5,5,0,0" Grid.Row="5" Grid.Column="1"/>
+                    <TextBlock x:Name="Birthday" Margin="5,5,0,0" Grid.Row="6" Grid.Column="1"/>
+                    <TextBlock x:Name="Introduction" Margin="5,5,0,0" Grid.Row="7" Grid.Column="1"/>
+                    
+                    <TextBlock x:Name="LUserName"  Margin="0,0,0,0" Grid.Row="0" Grid.Column="0"/>
+                    <TextBlock x:Name="LPassWord"  Margin="0,5,0,0" Grid.Row="1" Grid.Column="0"/>
+                    <TextBlock x:Name="LEmail" Margin="0,5,0,0" Grid.Row="2" Grid.Column="0"/>
+                    <TextBlock x:Name="LPhonenumber" Margin="0,5,0,0" Grid.Row="3" Grid.Column="0"/>
+                    <TextBlock x:Name="LAddress" Margin="0,5,0,0" Grid.Row="4" Grid.Column="0"/>
+                    <TextBlock x:Name="LGender" Margin="0,5,0,0" Grid.Row="5" Grid.Column="0"/>
+                    <TextBlock x:Name="LBirthday" Margin="0,5,0,0" Grid.Row="6" Grid.Column="0"/>
+                    <TextBlock x:Name="LIntroduction" Margin="0,5,0,0" Grid.Row="7" Grid.Column="0"/>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
